@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KD Enterprises - Services</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: #fa8f04;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .logo {
+            width: 100px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .owner-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .owner-photo {
+            width: 170px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 500%;
+           display: circle
+
+        }
+
+        #services-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            #services-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="file:///C:/Users/user/Pictures/KD.png" alt="Blue gear with a stylized K and D in the center, symbolizing engineering and construction. The logo appears modern and professional, set against a clean background. The design conveys confidence and reliability. No visible text in the image." class="logo">
+        <h1>KD Enterprises</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Services</h2>
+
+        <div class="owner-section">
+            <img src="file:///C:/Users/user/Pictures/IMG_20241225_130119409_HDR.jpg" alt="Man with short gray hair wearing a light blue shirt and a gray plaid vest, seated against a solid purple background. The setting appears formal and professional, conveying a calm and approachable demeanor. No visible text in the image." class="owner-photo">
+            <p><strong>Owner:</strong> Gopal Singh Chahahar</p>
+        </div>
+
+        <div id="services-list">
+            <!-- Services will be added dynamically -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 KD Enterprises | Owner: Gopal Singh Chahahar</p>
+    </footer>
+
+    <script>
+        const services = [
+            "Road Construction",
+            "Bridge Building",
+            "Railway Pole Installation",
+            "(Silver Line) Works",
+            "Electrical Light Installation",
+            "Custom Civil Contracting Solutions"
+        ];
+
+        const servicesList = document.getElementById('services-list');
+
+        services.forEach(service => {
+            const serviceCard = document.createElement('div');
+            serviceCard.classList.add('service-card');
+            serviceCard.innerHTML = `<h3>${service}</h3><p>Professional, safe, and high quality work by KD Enterprises.</p>`;
+            servicesList.appendChild(serviceCard);
+        });
+    </script>
+
+</body>
+
+</html>
